@@ -1,0 +1,11 @@
+<h1>All Options</h1>
+
+<ul id="options">
+  <% @options.each do |option| %>
+    <li>
+      <%= link_to "Option "+option.id.to_s, option_path(option) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Option", new_option_path, class: "new_option" %>
