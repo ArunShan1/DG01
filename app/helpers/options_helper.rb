@@ -3,6 +3,10 @@ module OptionsHelper
   params.require(:option).permit(:id, :option0, :option1, :count0, :count1)
 end
 def maxoption
-   Option.last.id
+  if Option.nil?
+    0
+  else
+    Option.last.id
+  end
  end
 end
