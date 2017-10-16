@@ -3,7 +3,7 @@
 *{
     background-color: #FFD500;
     font-family: Montserrat, monospace, sans-serif;
-    color:#4a4b41;
+    color:black;
 }
 
 .logo{
@@ -13,14 +13,15 @@
     }
 
 .finished{
-    border: 3px solid #4a4b41;
+    border: 3px solid black;
     border-radius: 3px;
     display: inline-block;
-    padding: 2px 20px;
+    padding: 4px 50px;
+
     text-align:justify;
     margin: auto;
     margin-left: 420px;
-    margin-top: 230px;
+    margin-top: 0px;
     width: 30%;
 }
 
@@ -29,12 +30,13 @@ h2{
 }
 
 
-.footertag{ 
+.footertag{
     display: inline-block;
-    line-height: 1px;
     font-size: 10px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    margin: auto;
+    text-align: center;
     padding-left: 590px;
-    text-align: center;   
+
 }

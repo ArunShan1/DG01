@@ -1,11 +1,34 @@
-<h1>Make your decision</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ZERO or 1</title>
+    <meta name="description" content="a simple A or B type market-research tool">
+    <link rel="stylesheet" href="choice.css">
+</head>
+<body>
+ <header>
+    <div class=logo> <img src="https://farm5.staticflickr.com/4381/23557816978_0f72f5f26d_m.jpg" width="180" height="180" alt="0•1 LOGO"> </div>
+</header>
 
-<% if @options.id < maxoption %>
+    <div class=panelholders>
+    <% if @options.id < maxoption %>
+    <% nextpage = "/options/"+(@options.id + 1).to_s %>
+    <% else %>
+    <% nextpage = "/pages/finish" %>
+    <% end %>
+    <div class=panelholderzero>
+        <%= link_to @options.option0, nextpage %>
+     </div>
+    <div class=panelholderone>
+        <%= link_to @options.option1, nextpage %>
+    </div>
+    </div>
+</body>
 
-<p><%= link_to @options.option0, "/options/"+(@options.id + 1).to_s %></p>
-<p><%= link_to @options.option1, "/options/"+(@options.id + 1).to_s %></p>
-
-<% else %>
-<p><%= link_to @options.option0, "/pages/finish" %></p>
-<p><%= link_to @options.option1, "/pages/finish" %></p>
-<% end %>
+<footer>
+    <div class="footertag">
+        <p>A DataGap product</p>
+    </div>
+</footer>

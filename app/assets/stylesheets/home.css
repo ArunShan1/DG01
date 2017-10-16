@@ -8,30 +8,33 @@
 }
 
 .logo{
-    position:absolute;
+    position:static;
     left:0;
     top:0;
 }
 
 .welcome{
-    display: inline-block;
+    display: block;
     color: black;
     position: relative;
-    left: 20%;    
+    text-align: center;
+    margin: auto;
+    width: 100%;
 }
 
 .startbutton{  
     border: 2px solid white;
     border-radius: 3px;
-    display: inline-block;
     font-weight: 500;
-    padding: 1px 55px;
-    height: 45px;
-    line-height: 45px;
     font-size: 25px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    display: inline-block;
+    position: absolute;
+    right: 45%;
+    padding-left: 35px;
+    padding-right: 35px;
+    line-height: 45px;
+    text-align: center;
+    
 }
 
 a:link{
@@ -50,7 +53,7 @@ a:visited{
     display: inline-block;
     line-height: 1px;
     font-size: 10px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding-left: 590px;
     text-align: center;   

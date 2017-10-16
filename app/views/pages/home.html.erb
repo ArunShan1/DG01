@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ZERO or 1</title>
     <meta name="description" content="a simple A or B type market-research tool">
-    <link rel="stylesheet" href="homepage.css">
-    <script type="text/javascript" src="homepage.js"></script>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
 <header>
-    <div class=logo> <a href="/">
-      <img src="https://farm5.staticflickr.com/4381/23557816978_0f72f5f26d_m.jpg" width="240" height="240" alt="0•1 LOGO"> </div>
-</a>
+    <div class=logo> <img src="https://farm5.staticflickr.com/4381/23557816978_0f72f5f26d_m.jpg" width="240" height="240" alt="0•1 LOGO"> </div>
 </header>
 <section>
+    <div class=container>
     <div class=welcome>
         <p><b>Welcome to 0 or 1</b> - the data-collection app that understands people’s preferences and needs.</p>
+        </div>
+
+        <div class=startbutton>
+          <% if maxoption > 0 %>
+          <a href="/options/1">START</a>
+          <% else %>
+          <a href="/pages/finish">START</a>
+          <% end %>
+        </div>
     </div>
 </section>
-    <div class=startbutton>
-      <% if maxoption > 0 %>
-      <a href="/options/1">START</a>
-      <% else %>
-      <a href="/pages/finish">START</a>
-      <% end %>
-    </div>
-</body>
+
+    </body>
 <footer>
     <div class=footertag>
         <p>A DataGap product</p>
