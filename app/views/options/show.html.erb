@@ -1,2 +1,11 @@
-<p><%= @options.option0 %></p>
-<p><%= @options.option1 %></p>
+<h1>Make your decision</h1>
+
+<% if @options.id < maxoption %>
+
+<p><%= link_to @options.option0, "/options/"+(@options.id + 1).to_s %></p>
+<p><%= link_to @options.option1, "/options/"+(@options.id + 1).to_s %></p>
+
+<% else %>
+<p><%= link_to @options.option0, "/pages/finish" %></p>
+<p><%= link_to @options.option1, "/pages/finish" %></p>
+<% end %>

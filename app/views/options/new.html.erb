@@ -1,0 +1,29 @@
+<h1>Create a New Option</h1>
+<%= form_for(@options) do |f| %>
+  <ul>
+  <% @options.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+
+  <p>
+    <%= f.label "First Option"%><br />
+    <%= f.text_field :option0 %>
+  </p>
+  <p>
+    <%= f.label "Second Option" %><br />
+    <%= f.text_field :option1 %>
+  </p>
+<!--  <p>
+    <%= f.label :count0 %><br />
+    <%= f.text_field :count0 %>
+  </p>
+  <p>
+    <%= f.label :count1 %><br />
+    <%= f.text_field :count1 %>
+  </p>
+-->
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
