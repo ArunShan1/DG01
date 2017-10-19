@@ -15,6 +15,19 @@ class OptionsController < ApplicationController
     @options.count1 = 0
     @options.id = maxoption + 1
     @options.save
-    redirect_to option_path(@options)
+    redirect_to options_path
   end
+  def destroy
+    @options = Option.find(params[:id])
+    @options.destroy
+    redirect_to options_path
+  end
+  def edit
+  @options = Option.find(params[:id])
+end
+  def update
+  @options = Option.find(params[:id])
+  @options.update(option_params)
+  redirect_to option_path
+end
 end

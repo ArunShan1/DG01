@@ -13,20 +13,27 @@
 
 <section>
       <div class=finished>
-<h1>All Options</h1>
 
-<ul id="options">
-  <% @options.each do |option| %>
-    <li>
-      <%= link_to "Option "+option.id.to_s, option_path(option) %>
-      <%= link_to "Delete", option_path(option), method: :delete,data: {confirm: "Really delete the option?"}%>
-      <%= link_to "Edit", edit_option_path(option) %>
-    </li>
+<h1>Edit an Option</h1>
+<%= form_for(@options) do |f| %>
+  <ul>
+  <% @options.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
   <% end %>
-</ul>
+  </ul>
 
+  <p>
+    <%= f.label "First Option"%><br />
+    <%= f.text_field :option0 %>
+  </p>
+  <p>
+    <%= f.label "Second Option" %><br />
+    <%= f.text_field :option1 %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
 
-<%= link_to "Create a New Option", new_option_path, class: "new_option" %>
 </div>
 
 </section>
@@ -36,3 +43,4 @@
     <p>A DataGap product</p>
 </div>
 </footer>
+<% end %>
