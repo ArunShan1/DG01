@@ -22,7 +22,7 @@
     width: 100%;
 }
 
-.startbutton{  
+.startbutton{
     border: 2px solid white;
     border-radius: 3px;
     font-weight: 500;
@@ -34,7 +34,7 @@
     padding-right: 35px;
     line-height: 45px;
     text-align: center;
-    
+
 }
 
 a:link{
@@ -48,13 +48,13 @@ a:visited{
 }
 
 
-.footertag{ 
+.footertag{
     color: #4a4b41;
-    display: inline-block;
+    display: block;
     line-height: 1px;
     font-size: 10px;
     position: fixed;
     bottom: 0;
     padding-left: 590px;
-    text-align: center;   
+    text-align: center;
 }
